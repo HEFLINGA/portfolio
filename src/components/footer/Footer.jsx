@@ -7,11 +7,13 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a href="#" className="footer_logo">
         Auston Hefling
       </a>
       <ul className="permalinks">
         <li>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">Home</a>
         </li>
         <li>

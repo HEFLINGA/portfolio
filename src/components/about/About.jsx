@@ -16,17 +16,27 @@ const About = () => {
             <img src={ME} alt="About" />
           </div>
         </div>
+
+        {/* ------ END ABOUT ME IMAGE */}
+
         <div className="about_content">
           <div className="about_cards">
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>blah blah years experience</small>
+              <small>2+ Years Fullstack Experience</small>
+              <div className="line"></div>
+              <small>
+                4+ Years Professional and Academic General Programming
+                Experience
+              </small>
             </article>
             <article className="about_card">
               <HiAcademicCap className="about_icon" />
               <h5>Academics</h5>
-              <small>blah blah academics</small>
+              <small>Summa Cum Laude Honor Graduate</small>
+              <div className="line"></div>
+              <small>"Outstanding CSCI Student" Award Recipient</small>
             </article>
             <article className="about_card">
               <TfiLayoutPlaceholder className="about_icon" />
@@ -35,12 +45,12 @@ const About = () => {
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Tincidunt id aliquet risus feugiat. Convallis convallis tellus id
-            interdum velit laoreet id donec. Non odio euismod lacinia at. Eget
-            velit aliquet sagittis id consectetur purus ut faucibus pulvinar.
-            Eget magna fermentum iaculis eu non diam phasellus.
+            I am a Summa Cum Laude honor graduate with a Bachelors of Science in
+            Computer Science from Coastal Carolina University (CCU). I also
+            recieved the "Outstanding Computer Science Student" award for
+            academic and professional performance while attending CCU. I enjoy
+            programming both professionally, as well as in my free time for
+            personal projects such as developing websites or video games.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk

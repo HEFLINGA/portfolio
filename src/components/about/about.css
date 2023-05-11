@@ -1,7 +1,7 @@
 .about_container {
     display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
     height: auto;
 }
 
@@ -12,7 +12,7 @@
     background: linear-gradient(var(--color-primary-variant), var(--color-white), var(--color-primary-variant));
     display: grid;
     place-items: center;
-    transform: rotate(0);
+    transform: rotate(-12);
     transition: var(--transition);
 }
 
@@ -29,11 +29,10 @@
         var(--color-primary), 
         var(--color-bg-variant)
         );
-    transform: rotate(0);
     transition: var(--transition);
 }
 
-.about_me:hover .about_me_img {
+.about_me:hover > .about_me_img {
     transform: rotate(-12deg);
 }
 
@@ -76,6 +75,15 @@
 .about_content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    font-weight: 500;
+    font-size: large;
+}
+
+.line {
+    border-bottom: .05rem solid;
+    width: 4rem;
+    margin: auto;
+    padding: .2rem;
 }
 
 /* ---------- Media Queries : Medium Devices ----------- */
