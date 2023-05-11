@@ -11,6 +11,12 @@
     background: linear-gradient(var(--color-primary-variant), var(--color-white), var(--color-primary-variant));
     display: grid;
     place-items: center;
+    transform: rotate(0);
+    transition: var(--transition);
+}
+
+.about_me:hover {
+    transform: rotate(12deg);
 }
 
 .about_me_img {
@@ -22,12 +28,12 @@
         var(--color-primary), 
         var(--color-bg-variant)
         );
-    transform: rotate(12deg);
+    transform: rotate(0);
     transition: var(--transition);
 }
 
-.about_me_img:hover {
-    transform: rotate(0);
+.about_me:hover .about_me_img {
+    transform: rotate(-12deg);
 }
 
 .about_cards {
