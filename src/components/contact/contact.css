@@ -59,6 +59,30 @@ input, textarea {
     opacity: .7;
 }
 
+.message {
+    position: relative;
+    background-color: #8bc34a;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2rem auto;
+    width: 25rem;
+}
+
+.message .dismiss {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 35px;
+    color: black;
+    cursor: pointer;
+}
+
+.message .dismiss:hover {
+    color: gray;
+}
+
 /* ---------- Media Queries : Medium Devices ----------- */
 @media screen and (max-width: 1024px) {
     .container.contact_container {

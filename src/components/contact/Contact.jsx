@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
 
@@ -8,6 +8,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,18 +23,28 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setMessage("Message sent successfully!");
         },
         (error) => {
           console.log(error.text);
+          setMessage("Oops! Something went wrong.");
         }
       );
 
     e.target.reset();
   };
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
+
+        {message && (
+          <div className="message">
+            <p>{message}</p>
+            <span className="dismiss" onClick={() => setMessage("")}>&times;</span>
+          </div>
+        )}
 
       <div className="container contact_container">
         <div className="contact_options">
@@ -74,13 +85,13 @@ const Contact = () => {
           />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea
-            name="messege"
+            name="message"
             rows="7"
-            placeholder="Your Messege"
+            placeholder="Your Message"
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Messege
+            Send Message
           </button>
         </form>
       </div>
