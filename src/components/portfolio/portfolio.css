@@ -24,13 +24,20 @@
 }
 
 .portfolio_item h3 {
-    margin: 1.2rem 0 2rem;
+    margin: 1.2rem 0 1rem;
+}
+
+.portfolio_item p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    opacity: .9;
 }
 
 .portfolio_item_cta {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 /* ---------- Media Queries : Medium Devices ----------- */
