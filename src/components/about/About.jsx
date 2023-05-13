@@ -3,7 +3,6 @@ import "./about.css";
 import ME from "../../assets/prof_img.png";
 import { FaAward } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
-import { TfiLayoutPlaceholder } from "react-icons/tfi";
 
 const About = () => {
   return (
@@ -38,11 +37,11 @@ const About = () => {
               <div className="line"></div>
               <small>"Outstanding CSCI Student" Award Recipient</small>
             </article>
-            <article className="about_card">
+            {/* <article className="about_card">
               <TfiLayoutPlaceholder className="about_icon" />
               <h5>PLACEHOLDER</h5>
               <small>blah blah PLACEHOLDER </small>
-            </article>
+            </article> */}
           </div>
           <p>
             I am a Summa Cum Laude honor graduate with a Bachelors of Science in
