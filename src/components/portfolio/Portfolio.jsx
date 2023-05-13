@@ -1,38 +1,26 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/portf_img1.webp";
-import IMG2 from "../../assets/portf_img2.jpg";
-import IMG3 from "../../assets/portf_img3.jpg";
-import IMG4 from "../../assets/portf_img4.jpg";
+import IMG1 from "../../assets/portfolio_img.png";
+import IMG2 from "../../assets/bb_img.jpg";
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Project 1 Title",
-    github: "https://github.com",
-    demo: "https://github.com",
+    title: "Personal Portfolio",
+    description: "My personal portfolio for displaying my current skills, experience, and fully completed projects, as well as to showcase my frontend development abilities.",
+    tech: "React, Tailwindcss, HTML/CSS",
+    github: "https://github.com/HEFLINGA/ExerciseClassProject",
+    demo: "https://heflinga.github.io/",
   },
   {
     id: 2,
     image: IMG2,
-    title: "Project 2 Title",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "Project 3 Title",
-    github: "https://github.com",
-    demo: "https://github.com",
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Project 4 Title",
-    github: "https://github.com",
-    demo: "https://github.com",
+    title: "Microsoft Software and Systems Academy Final Project",
+    description: "Stuff",
+    tech: "thing 1, thing 2",
+    github: "https://github.com/HEFLINGA/ExerciseClassProject",
+    demo: "",
   },
 ];
 
@@ -43,13 +31,15 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio_container">
-        {data.map(({ id, image, title, github, demo }) => {
+        {data.map(({ id, image, title, description, tech, github, demo }) => {
           return (
             <article key={id} className="portfolio_item">
               <div className="portfolio_item_image">
                 <img src={image} alt={title} />
               </div>
               <h3>{title}</h3>
+              <p>{description}</p>
+              <p><strong>Technology used:</strong> {tech}</p>
               <div className="portfolio_item_cta">
                 <a
                   href={github}
@@ -59,7 +49,8 @@ const Portfolio = () => {
                 >
                   Github
                 </a>
-                <a
+                {demo !== "" ? (
+                  <a
                   href={demo}
                   className="btn btn-primary"
                   target="_blank"
@@ -67,6 +58,8 @@ const Portfolio = () => {
                 >
                   Live Demo
                 </a>
+                ) : null }
+                
               </div>
             </article>
           );
